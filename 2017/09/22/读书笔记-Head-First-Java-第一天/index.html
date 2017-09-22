@@ -19,7 +19,9 @@
 <meta property="og:image" content="http://yoursite.com/article_img/读书笔记_HFJ_第一天_1.png">
 <meta property="og:image" content="http://yoursite.com/article_img/读书笔记_HFJ_第一天_2.png">
 <meta property="og:image" content="http://yoursite.com/article_img/读书笔记_HFJ_第一天_3.png">
-<meta property="og:updated_time" content="2017-09-22T01:15:37.035Z">
+<meta property="og:image" content="http://yoursite.com/article_img/读书笔记_HFJ_第一天_4.png">
+<meta property="og:image" content="http://yoursite.com/article_img/读书笔记_HFJ_第一天_5.png">
+<meta property="og:updated_time" content="2017-09-22T01:28:36.044Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="读书笔记_Head First Java_第一天">
 <meta name="twitter:description" content="Java 的工作方式">
@@ -203,6 +205,18 @@
         <h4 id="Java-的工作方式"><a href="#Java-的工作方式" class="headerlink" title="Java 的工作方式"></a>Java 的工作方式</h4><p><img src="/article_img/读书笔记_HFJ_第一天_1.png" alt="HFJ_1_1"><br><a id="more"></a><br>源代码 –&gt; 编译器 -&gt; 输出 –&gt; Java虚拟机</p>
 <h4 id="Java简史"><a href="#Java简史" class="headerlink" title="Java简史"></a>Java简史</h4><p><img src="/article_img/读书笔记_HFJ_第一天_2.png" alt="HFJ_1_2"><br>Java1.02(250个类) -&gt; Java1.1(500个类) –&gt; Java2(2300个类) -&gt; Java5.0(3500个类)</p>
 <h4 id="Java的程序结构"><a href="#Java的程序结构" class="headerlink" title="Java的程序结构"></a>Java的程序结构</h4><p><img src="/article_img/读书笔记_HFJ_第一天_3.png" alt="HFJ_1_3"><br><strong>源文件</strong>（扩展名为.java）带有类的定义。类用来表示程序的一个组件，小程序或许只会有一个类。<br><strong>类</strong>中带有一个或多个方法。方法必须在类的内部声明。<br><strong>方法</strong>代码是由一组语句所组成，你可以把方法想向成一个函数或过程。</p>
+<h4 id="剖析类"><a href="#剖析类" class="headerlink" title="剖析类"></a>剖析类</h4><p><img src="/article_img/读书笔记_HFJ_第一天_4.png" alt="HFJ_1_4"><br>在Java中所有东西都会属于某个类。你会建立源文件（扩展名为.java），然后将它编译成新的类文件（扩展名为.class）。真正被执行的是类。</p>
+<h4 id="关于main"><a href="#关于main" class="headerlink" title="关于main()"></a>关于main()</h4><p>要执行程序就代表要命令Java虚拟机（JVM）去“加载某个类，开始执行它的main(),然后一直运行到main所有的程序代码结束为止”。<br>Main()作为程序的起点，不管程序有多大（不管有多少个类），一定都会有一个main()来作为程序的起点。<br><img src="/article_img/读书笔记_HFJ_第一天_5.png" alt="HFJ_1_5"><br>我们能在main()中做以下事情。</p>
+<ul>
+<li>1.做某事(声明、设定、调用方法等普通语句)；</li>
+<li>2.反复做某件事(for与while的循环)；</li>
+<li>3.在适当条件下做某件事(if/else的条件分支测试)</li>
+</ul>
+<p>注：在Java中integer与boolean两种类型并不相容。</p>
+<h4 id="要点小结"><a href="#要点小结" class="headerlink" title="要点小结"></a>要点小结</h4><blockquote>
+<p>语句以分号结束<br>程序以{ }划出范围<br>用名称与类型声明变量<br>等号是赋值运算符<br>两个等号用来当等式等号运算符<br>只要条件测试结果为真，while循环就会一直执行块内的程序<br>把boolean测试放在括号中：<br><code>code</code> while (x == 4) {}</p>
+</blockquote>
+<p>System.out.print与System.out.println区别：println会在最后面插入换行，若你想要让后续的输出以新的一行开始，可以使用println，若是使用print则后续的输出还是会在同一行。</p>
 
       
 
