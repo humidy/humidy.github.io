@@ -17,7 +17,7 @@
 <meta property="og:description" content="通用量词一般形式，如果我们要匹配大陆地区的邮政编码，需要同时满足两个条件“长度是6个字符”和“每个字符都是数字”，我们可以使用如下方式匹配re.search(r”^\d\d\d\d\d\d$”,”330000”) is not None虽然不难理解，但\d重复了6次，读写都不方便，为此，正则表达式提供了量词。以上可以简写为re.search(r”^\d{6}$”,”330000”) is not">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/article_img/读书笔记_正则指引_第二天_1.png">
-<meta property="og:updated_time" content="2017-09-24T13:59:02.125Z">
+<meta property="og:updated_time" content="2017-09-24T14:03:49.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="读书笔记_正则指引_第二天">
 <meta name="twitter:description" content="通用量词一般形式，如果我们要匹配大陆地区的邮政编码，需要同时满足两个条件“长度是6个字符”和“每个字符都是数字”，我们可以使用如下方式匹配re.search(r”^\d\d\d\d\d\d$”,”330000”) is not None虽然不难理解，但\d重复了6次，读写都不方便，为此，正则表达式提供了量词。以上可以简写为re.search(r”^\d{6}$”,”330000”) is not">
@@ -198,7 +198,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="通用量词"><a href="#通用量词" class="headerlink" title="通用量词"></a>通用量词</h4><p>一般形式，如果我们要匹配大陆地区的邮政编码，需要同时满足两个条件“长度是6个字符”和“每个字符都是数字”，我们可以使用如下方式匹配<br>re.search(r”^\d\d\d\d\d\d$”,”330000”) is not None<br>虽然不难理解，但\d重复了6次，读写都不方便，为此，正则表达式提供了量词。以上可以简写为<br><code>re.search(r”^\d{6}$”,”330000”) is not None</code><br>量词还可以表示不确定的长度，用{m,n}表示，其中m和n是两个数字，它限定之前的元素能够出现的次数，m是下限，n是上限，均为闭区间。<br><a id="more"></a><br>—-|——<br>{n}    | 之前的元素必须出现n次<br>{m,n}  | 之前的元素最少出现m次,最多出现n次<br>{m,}   | 之前的元素最少出现m次，出现次数无上限<br>{0,n}  |之前的元素可以不出现，也可以出现，最多出现n次</p>
+        <h4 id="通用量词"><a href="#通用量词" class="headerlink" title="通用量词"></a>通用量词</h4><p>一般形式，如果我们要匹配大陆地区的邮政编码，需要同时满足两个条件“长度是6个字符”和“每个字符都是数字”，我们可以使用如下方式匹配<br>re.search(r”^\d\d\d\d\d\d$”,”330000”) is not None<br>虽然不难理解，但\d重复了6次，读写都不方便，为此，正则表达式提供了量词。以上可以简写为<br><code>re.search(r”^\d{6}$”,”330000”) is not None</code><br>量词还可以表示不确定的长度，用{m,n}表示，其中m和n是两个数字，它限定之前的元素能够出现的次数，m是下限，n是上限，均为闭区间。<br><a id="more"></a></p>
+<ul>
+<li>{n}    之前的元素必须出现n次</li>
+<li>{m,n}  之前的元素最少出现m次,最多出现n次</li>
+<li>{m,}   之前的元素最少出现m次，出现次数无上限</li>
+<li>{0,n}  之前的元素可以不出现，也可以出现，最多出现n次</li>
+</ul>
 <h4 id="常用量词"><a href="#常用量词" class="headerlink" title="常用量词"></a>常用量词</h4><p>{m,n}是通用形式的量词，正则表达式还有三个常用的量词，分别是’+’、’?’、’<em>’。它们的形态虽然不同于{m,n}，功能却是相同的。
 </em>等价于{0,}  可能出现，也可能不出现，出现次数没有上线<br>+等价于{1,}  至少出现1次，出现次数没有上限<br>？等价于{0,1}至多出现1次，也可能不出现<br>注：在实际应用中，很多情况只需要表示这三种意识，所以常用词的频率要高于{m,n}</p>
 <h4 id="数据提取"><a href="#数据提取" class="headerlink" title="数据提取"></a>数据提取</h4><p>正则表达式除了验证（字符串能否由正则表达式匹配）外，还能从某个字符串中提取出某个字符串匹配的所有文本。<br>在Python的 re模块中，re.search()如果匹配成功，可以调用 MatchObject.group(0)方法来获得表达式匹配的文本。<br>另一个方法：re.findall(pattern,string)其中pattern是正则表达式，string是字符串。这个方法会返回一个数组，其中的元素是在string中依次寻找pattern能匹配的文本。<br><code>print(re.findall(r&#39;\d{6}&#39;,&#39;zip:201203,zip:100859&#39;))</code></p>
@@ -520,11 +526,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">读书</a>
+                <a href="javascript:void(0)" class="js-tag color3">成长</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">成长</a>
+                <a href="javascript:void(0)" class="js-tag color3">读书</a>
               </li>
             
             <div class="clearfix"></div>
