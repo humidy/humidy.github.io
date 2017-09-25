@@ -6,26 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>读书笔记_Head First Java_第一天 | 求索&amp;进化</title>
+  <title>读书笔记-Head-First-Java-第三天 | 求索&amp;进化</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java 的工作方式">
+  <meta name="description" content="认识变量变量有两种：primitive主数据类型和引用变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。声明变量的规则：1.变量必须拥有类型；2.变量必须要有名称Primitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称">
 <meta name="keywords" content="读书">
 <meta property="og:type" content="article">
-<meta property="og:title" content="读书笔记_Head First Java_第一天">
-<meta property="og:url" content="http://yoursite.com/2017/09/22/读书笔记-Head-First-Java-第一天/index.html">
+<meta property="og:title" content="读书笔记-Head-First-Java-第三天">
+<meta property="og:url" content="http://yoursite.com/2017/09/25/读书笔记-Head-First-Java-第三天/index.html">
 <meta property="og:site_name" content="求索&amp;进化">
-<meta property="og:description" content="Java 的工作方式">
+<meta property="og:description" content="认识变量变量有两种：primitive主数据类型和引用变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。声明变量的规则：1.变量必须拥有类型；2.变量必须要有名称Primitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/article_img/读书笔记_HFJ_第一天_1.png">
-<meta property="og:image" content="http://yoursite.com/article_img/读书笔记_HFJ_第一天_2.png">
-<meta property="og:image" content="http://yoursite.com/article_img/读书笔记_HFJ_第一天_3.png">
-<meta property="og:image" content="http://yoursite.com/article_img/读书笔记_HFJ_第一天_4.png">
-<meta property="og:image" content="http://yoursite.com/article_img/读书笔记_HFJ_第一天_5.png">
-<meta property="og:updated_time" content="2017-09-24T02:18:06.609Z">
+<meta property="og:updated_time" content="2017-09-25T15:40:05.584Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="读书笔记_Head First Java_第一天">
-<meta name="twitter:description" content="Java 的工作方式">
-<meta name="twitter:image" content="http://yoursite.com/article_img/读书笔记_HFJ_第一天_1.png">
+<meta name="twitter:title" content="读书笔记-Head-First-Java-第三天">
+<meta name="twitter:description" content="认识变量变量有两种：primitive主数据类型和引用变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。声明变量的规则：1.变量必须拥有类型；2.变量必须要有名称Primitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -182,41 +176,74 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-读书笔记-Head-First-Java-第一天" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-读书笔记-Head-First-Java-第三天" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      读书笔记_Head First Java_第一天
+      读书笔记-Head-First-Java-第三天
     </h1>
   
 
         
-        <a href="/2017/09/22/读书笔记-Head-First-Java-第一天/" class="archive-article-date">
-  	<time datetime="2017-09-22T00:52:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-22</time>
+        <a href="/2017/09/25/读书笔记-Head-First-Java-第三天/" class="archive-article-date">
+  	<time datetime="2017-09-25T15:28:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="Java-的工作方式"><a href="#Java-的工作方式" class="headerlink" title="Java 的工作方式"></a>Java 的工作方式</h4><p><img src="/article_img/读书笔记_HFJ_第一天_1.png" alt="HFJ_1_1"><br><a id="more"></a><br>源代码 –&gt; 编译器 -&gt; 输出 –&gt; Java虚拟机</p>
-<h4 id="Java简史"><a href="#Java简史" class="headerlink" title="Java简史"></a>Java简史</h4><p><img src="/article_img/读书笔记_HFJ_第一天_2.png" alt="HFJ_1_2"><br>Java1.02(250个类) -&gt; Java1.1(500个类) –&gt; Java2(2300个类) -&gt; Java5.0(3500个类)</p>
-<h4 id="Java的程序结构"><a href="#Java的程序结构" class="headerlink" title="Java的程序结构"></a>Java的程序结构</h4><p><img src="/article_img/读书笔记_HFJ_第一天_3.png" alt="HFJ_1_3"><br><strong>源文件</strong>（扩展名为.java）带有类的定义。类用来表示程序的一个组件，小程序或许只会有一个类。<br><strong>类</strong>中带有一个或多个方法。方法必须在类的内部声明。<br><strong>方法</strong>代码是由一组语句所组成，你可以把方法想向成一个函数或过程。</p>
-<h4 id="剖析类"><a href="#剖析类" class="headerlink" title="剖析类"></a>剖析类</h4><p><img src="/article_img/读书笔记_HFJ_第一天_4.png" alt="HFJ_1_4"><br>在Java中所有东西都会属于某个类。你会建立源文件（扩展名为.java），然后将它编译成新的类文件（扩展名为.class）。真正被执行的是类。</p>
-<h4 id="关于main"><a href="#关于main" class="headerlink" title="关于main()"></a>关于main()</h4><p>要执行程序就代表要命令Java虚拟机（JVM）去“加载某个类，开始执行它的main(),然后一直运行到main所有的程序代码结束为止”。<br>Main()作为程序的起点，不管程序有多大（不管有多少个类），一定都会有一个main()来作为程序的起点。<br><img src="/article_img/读书笔记_HFJ_第一天_5.png" alt="HFJ_1_5"><br>我们能在main()中做以下事情。</p>
+        <h4 id="认识变量"><a href="#认识变量" class="headerlink" title="认识变量"></a>认识变量</h4><p>变量有两种：<strong>primitive主数据类型</strong>和<strong>引用</strong><br>变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。<br>声明变量的规则：1.变量必须拥有类型；2.变量必须要有名称<br>Primitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称<br><a id="more"></a><br>类型    |位数|    值域<br>—-|——|—-<br>boolean|    Java虚拟机决定|    true或false<br>char    |16bits    |0~65535<br>byte    |8bits    |-128~127<br>short    |16 bits    |-32768~32767<br>int    |32 bits    |-2147483648~2147483647<br>long    |64 bits    |-很大~+很大<br>float    |32 bits    |范围规模可变<br>double    |64 bits    |范围规模可变</p>
+<p>简记：Be Careful! Bears Shouldn’t Ingest Large Furry Dogs</p>
+<p>编译器不允许将大杯的内容放到小杯中，但反过来可以。</p>
+<h4 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h4><p>你可以根据以下规则来帮助类、方法或变量命名</p>
 <ul>
-<li>1.做某事(声明、设定、调用方法等普通语句)；</li>
-<li>2.反复做某件事(for与while的循环)；</li>
-<li>3.在适当条件下做某件事(if/else的条件分支测试)</li>
+<li>名称必须以字母、下划线(_)或$符号开头，不能用数字开头。</li>
+<li>除第一个字符之外，后面就可以用数字。反正不要用在第一个字符就行</li>
+<li>只要符合上述两条规则，你就可以随意地命名，但还是要避开Java保留字</li>
 </ul>
-<p>注：在Java中integer与boolean两种类型并不相容。</p>
-<h4 id="要点小结"><a href="#要点小结" class="headerlink" title="要点小结"></a>要点小结</h4><blockquote>
-<p>语句以分号结束<br>程序以{ }划出范围<br>用名称与类型声明变量<br>等号是赋值运算符<br>两个等号用来当等式等号运算符<br>只要条件测试结果为真，while循环就会一直执行块内的程序<br>把boolean测试放在括号中：<br><code>while (x == 4) {}</code></p>
-</blockquote>
-<p><strong>System.out.print与System.out.println区别：</strong><br>println会在最后面插入换行，若你想要让后续的输出以新的一行开始，可以使用println，若是使用print则后续的输出还是会在同一行。</p>
+<h4 id="保留字一览表"><a href="#保留字一览表" class="headerlink" title="保留字一览表"></a>保留字一览表</h4><p><code>boolean byte char double float int long short public private
+protected abstract final native static strictfp synchronized transient volatile if
+else do while switch case default for break continue assert
+class extends implements import instanceof interface new package super this
+catch finally try throw throws return void const goto enum</code><br>这些是Java的保留字，如果你把他们用在名称上面，编译器会列出混乱的结果。</p>
+<h4 id="控制对象"><a href="#控制对象" class="headerlink" title="控制对象"></a>控制对象</h4><p>非primitive主数据类型的变量又该如何处理，对象要怎么处理。<br>事实上没有对象变量这样的东西<br>只有引用到对象的变量<br>对象引用变量保存的是存取对象的方法<br>它并不是对象的容器，而是类似指向对象的指针。或者可以说是地址。但在Java中我们不会也不该知道引用变量实际装载的是什么，它只是用来代表单一的对象。只有Java虚拟机才会知道如何引用来取得该对象。</p>
+<p>没有超巨型的杯子可以放大到能够装载所有对象。对象只会存在可回收垃圾的堆上。<br>虽然primitive主数据类型变量是以字节来代表实际的变量值，但对象引用变量却是以字节来表示取得对象的方法。</p>
+<p>对象的声明、创建与赋值3步骤：</p>
+<ol>
+<li>声明一个引用变量</li>
+<li>创建对象</li>
+<li>连接对象和引用<br><code>Dog myDog = new Dog() ;</code></li>
+</ol>
+<p>对于任意一个Java虚拟机来说，所有的引用大小都一样。</p>
+<h4 id="Primitive主数据类型和引用"><a href="#Primitive主数据类型和引用" class="headerlink" title="Primitive主数据类型和引用"></a>Primitive主数据类型和引用</h4><p>1.声明一个int数组变量<br><code>Int[] nums;</code><br>2.创建大小为7的数组<br><code>nums = new int[7]</code><br>3.赋予int数组的每一个元素一个int值<br><code>nums[0] = 6
+nums[1] = 19
+nums[2] = 44
+nums[3] = 42
+nums[4] = 10
+nums[5] = 20
+nums[6] = 1</code><br>数组也是对象</p>
+<h4 id="创建对象数组"><a href="#创建对象数组" class="headerlink" title="创建对象数组"></a>创建对象数组</h4><ol>
+<li><p>声明一个Dog数组变量<br><code>Dog[] pets;</code></p>
+</li>
+<li><p>创建大小为7的Dog数组<br><code>pets = new Dog[7]</code></p>
+</li>
+<li><p>创建新的Dog对象并将它们赋值给数组的元素<br><code>pets[0] = new Dog()
+pets[1] = new Dog()</code><br>一旦数组被声明出来，你就只能装入所声明类型的元素。</p>
+</li>
+</ol>
+<h4 id="要点小结"><a href="#要点小结" class="headerlink" title="要点小结"></a>要点小结</h4><ul>
+<li>变量有两种：primitive主数据类型和引用</li>
+<li>变量的声明必须有类型和名称</li>
+<li>primitive主数据类型变量值是该值的字节所表示的</li>
+<li>引用变量的值代表位于堆之对象的存取方法</li>
+<li>引用变量如遥控器，对引用变量使用圆点运算符可以如同按下遥控器按钮般地存取它的方法或实例变量</li>
+<li>没有引用到任何对象的引用变量的值为null</li>
+<li>数组一定是个对象，不管所声明的元素是否为primitive主数据类型，并且没有primitive主数据类型的数组，只有装载primitive主数据类型的数组。</li>
+</ul>
 
       
 
@@ -328,7 +355,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/22/读书笔记-Head-First-Java-第一天/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/25/读书笔记-Head-First-Java-第三天/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -342,18 +369,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/09/22/读书笔记-正则指引-第一天/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          读书笔记_正则指引_第一天
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/09/03/写在新生之年/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">写在新生之年</div>
+    <a href="/2017/09/24/读书笔记-正则指引-第二天/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">读书笔记_正则指引_第二天</div>
       <i class="icon-circle-right"></i>
     </a>
   

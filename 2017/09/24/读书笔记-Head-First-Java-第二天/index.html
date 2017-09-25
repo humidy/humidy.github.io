@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>读书笔记-Head-First-Java-第二天 | 求索&amp;进化</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="以对象来思考 对象是已知的事物 对象会执行的动作对象本身已知的事物被称为：实例变量；它们代表对象的状态（数据），且该类型的每一个对象都会独立的拥有一份该类型的值。所以你也可以把对象当做实例。对象可">
+  <meta name="description" content="以对象来思考 对象是已知的事物 对象会执行的动作对象本身已知的事物被称为：实例变量；它们代表对象的状态（数据），且该类型的每一个对象都会独立的拥有一份该类型的值。所以你也可以把对象当做实例。对象可执行的动作称为方法，在设计类时，你也会设计出操作对象的数据的方法。对象带有读取或操作实例变量的方法是很常见的情形。">
 <meta name="keywords" content="读书">
 <meta property="og:type" content="article">
 <meta property="og:title" content="读书笔记-Head-First-Java-第二天">
 <meta property="og:url" content="http://yoursite.com/2017/09/24/读书笔记-Head-First-Java-第二天/index.html">
 <meta property="og:site_name" content="求索&amp;进化">
-<meta property="og:description" content="以对象来思考 对象是已知的事物 对象会执行的动作对象本身已知的事物被称为：实例变量；它们代表对象的状态（数据），且该类型的每一个对象都会独立的拥有一份该类型的值。所以你也可以把对象当做实例。对象可">
+<meta property="og:description" content="以对象来思考 对象是已知的事物 对象会执行的动作对象本身已知的事物被称为：实例变量；它们代表对象的状态（数据），且该类型的每一个对象都会独立的拥有一份该类型的值。所以你也可以把对象当做实例。对象可执行的动作称为方法，在设计类时，你也会设计出操作对象的数据的方法。对象带有读取或操作实例变量的方法是很常见的情形。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-24T02:22:59.664Z">
+<meta property="og:updated_time" content="2017-09-25T15:31:29.117Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="读书笔记-Head-First-Java-第二天">
-<meta name="twitter:description" content="以对象来思考 对象是已知的事物 对象会执行的动作对象本身已知的事物被称为：实例变量；它们代表对象的状态（数据），且该类型的每一个对象都会独立的拥有一份该类型的值。所以你也可以把对象当做实例。对象可">
+<meta name="twitter:description" content="以对象来思考 对象是已知的事物 对象会执行的动作对象本身已知的事物被称为：实例变量；它们代表对象的状态（数据），且该类型的每一个对象都会独立的拥有一份该类型的值。所以你也可以把对象当做实例。对象可执行的动作称为方法，在设计类时，你也会设计出操作对象的数据的方法。对象带有读取或操作实例变量的方法是很常见的情形。">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -198,7 +198,8 @@
       
         <h4 id="以对象来思考"><a href="#以对象来思考" class="headerlink" title="以对象来思考"></a>以对象来思考</h4><ul>
 <li>对象是已知的事物</li>
-<li>对象会执行的动作<br>对象本身已知的事物被称为：实例变量；它们代表对象的状态（数据），且该类型的每一个对象都会独立的拥有一份该类型的值。所以你也可以把对象当做实例。<br>对象可<a id="more"></a><h4 id="类和对象两者有什么不同"><a href="#类和对象两者有什么不同" class="headerlink" title="类和对象两者有什么不同"></a>类和对象两者有什么不同</h4>类不是对象（却是用来创建它们的模型）。类是对象的<strong>蓝图</strong>。它会告诉虚拟机如何创建某种类型的对象。根据某类创建出的对象都会有自己的实例变量。</li>
+<li>对象会执行的动作<br>对象本身已知的事物被称为：实例变量；它们代表对象的状态（数据），且该类型的每一个对象都会独立的拥有一份该类型的值。所以你也可以把对象当做<strong>实例</strong>。<br>对象可执行的动作称为方法，在设计类时，你也会设计出操作对象的数据的方法。对象带有读取或操作实例变量的方法是很常见的情形。<a id="more"></a>
+<h4 id="类和对象两者有什么不同"><a href="#类和对象两者有什么不同" class="headerlink" title="类和对象两者有什么不同"></a>类和对象两者有什么不同</h4>类不是对象（却是用来创建它们的模型）。类是对象的<strong>蓝图</strong>。它会告诉虚拟机如何创建某种类型的对象。根据某类创建出的对象都会有自己的实例变量。</li>
 </ul>
 <h4 id="main-的两种用途"><a href="#main-的两种用途" class="headerlink" title="main()的两种用途"></a>main()的两种用途</h4><ul>
 <li>测试正真的类</li>
@@ -496,11 +497,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">成长</a>
+                <a href="javascript:void(0)" class="js-tag color3">读书</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">读书</a>
+                <a href="javascript:void(0)" class="js-tag color3">成长</a>
               </li>
             
             <div class="clearfix"></div>
