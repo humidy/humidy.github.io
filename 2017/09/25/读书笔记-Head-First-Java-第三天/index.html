@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>读书笔记-Head-First-Java-第三天 | 求索&amp;进化</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="认识变量变量有两种：primitive主数据类型和引用变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。声明变量的规则：1.变量必须拥有类型；2.变量必须要有名称。河西cleanPrimitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称">
+  <meta name="description" content="认识变量变量有两种：primitive主数据类型和引用变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。声明变量的规则：1.变量必须拥有类型;2.变量必须要有名称;Primitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称">
 <meta name="keywords" content="读书">
 <meta property="og:type" content="article">
 <meta property="og:title" content="读书笔记-Head-First-Java-第三天">
 <meta property="og:url" content="http://yoursite.com/2017/09/25/读书笔记-Head-First-Java-第三天/index.html">
 <meta property="og:site_name" content="求索&amp;进化">
-<meta property="og:description" content="认识变量变量有两种：primitive主数据类型和引用变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。声明变量的规则：1.变量必须拥有类型；2.变量必须要有名称。河西cleanPrimitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称">
+<meta property="og:description" content="认识变量变量有两种：primitive主数据类型和引用变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。声明变量的规则：1.变量必须拥有类型;2.变量必须要有名称;Primitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-26T04:11:59.833Z">
+<meta property="og:updated_time" content="2017-09-26T04:17:53.608Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="读书笔记-Head-First-Java-第三天">
-<meta name="twitter:description" content="认识变量变量有两种：primitive主数据类型和引用变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。声明变量的规则：1.变量必须拥有类型；2.变量必须要有名称。河西cleanPrimitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称">
+<meta name="twitter:description" content="认识变量变量有两种：primitive主数据类型和引用变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。声明变量的规则：1.变量必须拥有类型;2.变量必须要有名称;Primitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -196,7 +196,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="认识变量"><a href="#认识变量" class="headerlink" title="认识变量"></a>认识变量</h4><p>变量有两种：<strong>primitive主数据类型</strong>和<strong>引用</strong><br>变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。<br>声明变量的规则：1.变量必须拥有类型；2.变量必须要有名称。河西clean<br>Primitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称<br><a id="more"></a></p>
+        <h4 id="认识变量"><a href="#认识变量" class="headerlink" title="认识变量"></a>认识变量</h4><p>变量有两种：<strong>primitive主数据类型</strong>和<strong>引用</strong><br>变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。<br>声明变量的规则：<br>1.变量必须拥有类型;<br>2.变量必须要有名称;<br>Primitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称<br><a id="more"></a></p>
 <table>
 <thead>
 <tr>
@@ -257,14 +257,14 @@
 <li>只要符合上述两条规则，你就可以随意地命名，但还是要避开Java保留字</li>
 </ul>
 <h4 id="保留字一览表"><a href="#保留字一览表" class="headerlink" title="保留字一览表"></a>保留字一览表</h4><p><code>boolean byte char double float int long short public private
- protected abstract final native static strictfp synchronized transient volatile if
- else do while switch case default for break continue assert
- class extends implements import instanceof interface new package super this
- catch finally try throw throws return void const goto enum</code><br>这些是Java的保留字，如果你把他们用在名称上面，编译器会列出混乱的结果。</p>
+protected abstract final native static strictfp synchronized transient volatile if
+else do while switch case default for break continue assert
+class extends implements import instanceof interface new package super this
+catch finally try throw throws return void const goto enum</code><br>这些是Java的保留字，如果你把他们用在名称上面，编译器会列出混乱的结果。</p>
 <h4 id="控制对象"><a href="#控制对象" class="headerlink" title="控制对象"></a>控制对象</h4><p>非primitive主数据类型的变量又该如何处理，对象要怎么处理。<br>事实上没有对象变量这样的东西<br>只有引用到对象的变量<br>对象引用变量保存的是存取对象的方法<br>它并不是对象的容器，而是类似指向对象的指针。或者可以说是地址。但在Java中我们不会也不该知道引用变量实际装载的是什么，它只是用来代表单一的对象。只有Java虚拟机才会知道如何引用来取得该对象。</p>
 <p>没有超巨型的杯子可以放大到能够装载所有对象。对象只会存在可回收垃圾的堆上。<br>虽然primitive主数据类型变量是以字节来代表实际的变量值，但对象引用变量却是以字节来表示取得对象的方法。</p>
 <p>对象的声明、创建与赋值3步骤：<br>1.声明一个引用变量<br>2.创建对象<br>3.连接对象和引用<br><code>Dog myDog = new Dog() ;</code></p>
-<p>对于任意一个Java虚拟机来说，所有的引用大小都一样。</p>
+<p>对于任意一个Java虚拟机来说，所有的<strong>引用大小都一样</strong>。</p>
 <h4 id="Primitive主数据类型和引用"><a href="#Primitive主数据类型和引用" class="headerlink" title="Primitive主数据类型和引用"></a>Primitive主数据类型和引用</h4><p>1.声明一个int数组变量<br><code>Int[] nums;</code><br>2.创建大小为7的数组<br><code>nums = new int[7]</code><br>3.赋予int数组的每一个元素一个int值<br><code>nums[0] = 6
 nums[1] = 19
 nums[2] = 44
