@@ -283,7 +283,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="通用量词"><a href="#通用量词" class="headerlink" title="通用量词"></a>通用量词</h4><p>一般形式，如果我们要匹配大陆地区的邮政编码，需要同时满足两个条件“长度是6个字符”和“每个字符都是数字”，我们可以使用如下方式匹配<br>re.search(r”^\d\d\d\d\d\d$”,”330000”) is not None<br>虽然不难理解，但\d重复了6次，读写都不方便，为此，正则表达式提供了量词。以上可以简写为<br><code>re.search(r”^\d{6}$”,”330000”) is not None</code><br>量词还可以表示不确定的长度，用{m,n}表示，其中m和n是两个数字，它限定之前的元素能够出现的次数，m是下限，n是上限，均为闭区间。<br>
+        <h4 id="通用量词"><a href="#通用量词" class="headerlink" title="通用量词"></a>通用量词</h4><p>一般形式，如果我们要匹配大陆地区的邮政编码，需要同时满足两个条件“长度是6个字符”和“每个字符都是数字”，我们可以使用如下方式匹配<br><code>re.search(r”^\d\d\d\d\d\d$”,”330000”) is not None</code><br>虽然不难理解，但\d重复了6次，读写都不方便，为此，正则表达式提供了量词。以上可以简写为<br><code>re.search(r”^\d{6}$”,”330000”) is not None</code><br>量词还可以表示不确定的长度，用{m,n}表示，其中m和n是两个数字，它限定之前的元素能够出现的次数，m是下限，n是上限，均为闭区间。<br>
         
           <a class="article-more-a" href="/2017/09/24/读书笔记-正则指引-第二天/#more">more >></a>
         
