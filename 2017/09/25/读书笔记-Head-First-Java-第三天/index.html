@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>读书笔记-Head-First-Java-第三天 | 求索&amp;进化</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="认识变量变量有两种：primitive主数据类型和引用变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。声明变量的规则：1.变量必须拥有类型；2.变量必须要有名称Primitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称">
+  <meta name="description" content="认识变量变量有两种：primitive主数据类型和引用变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。声明变量的规则：1.变量必须拥有类型；2.变量必须要有名称。河西cleanPrimitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称">
 <meta name="keywords" content="读书">
 <meta property="og:type" content="article">
 <meta property="og:title" content="读书笔记-Head-First-Java-第三天">
 <meta property="og:url" content="http://yoursite.com/2017/09/25/读书笔记-Head-First-Java-第三天/index.html">
 <meta property="og:site_name" content="求索&amp;进化">
-<meta property="og:description" content="认识变量变量有两种：primitive主数据类型和引用变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。声明变量的规则：1.变量必须拥有类型；2.变量必须要有名称Primitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称">
+<meta property="og:description" content="认识变量变量有两种：primitive主数据类型和引用变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。声明变量的规则：1.变量必须拥有类型；2.变量必须要有名称。河西cleanPrimitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-25T15:40:05.584Z">
+<meta property="og:updated_time" content="2017-09-26T04:02:24.194Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="读书笔记-Head-First-Java-第三天">
-<meta name="twitter:description" content="认识变量变量有两种：primitive主数据类型和引用变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。声明变量的规则：1.变量必须拥有类型；2.变量必须要有名称Primitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称">
+<meta name="twitter:description" content="认识变量变量有两种：primitive主数据类型和引用变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。声明变量的规则：1.变量必须拥有类型；2.变量必须要有名称。河西cleanPrimitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -196,7 +196,58 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="认识变量"><a href="#认识变量" class="headerlink" title="认识变量"></a>认识变量</h4><p>变量有两种：<strong>primitive主数据类型</strong>和<strong>引用</strong><br>变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。<br>声明变量的规则：1.变量必须拥有类型；2.变量必须要有名称<br>Primitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称<br><a id="more"></a><br>类型    |位数|    值域<br>—-|——|—-<br>boolean|    Java虚拟机决定|    true或false<br>char    |16bits    |0~65535<br>byte    |8bits    |-128~127<br>short    |16 bits    |-32768~32767<br>int    |32 bits    |-2147483648~2147483647<br>long    |64 bits    |-很大~+很大<br>float    |32 bits    |范围规模可变<br>double    |64 bits    |范围规模可变</p>
+        <h4 id="认识变量"><a href="#认识变量" class="headerlink" title="认识变量"></a>认识变量</h4><p>变量有两种：<strong>primitive主数据类型</strong>和<strong>引用</strong><br>变量有两种口味：清凉的primitive主数据类型用来保存基本类型的值，包括整数、布尔和浮点数等。而对象引用保存的是对象的引用。<br>声明变量的规则：1.变量必须拥有类型；2.变量必须要有名称。河西clean<br>Primitive主数据类型如同咖啡馆的杯子，它们有不同的大小，而每种大小都有个名称<br><a id="more"></a></p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>位数</th>
+<th>值域</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>Java虚拟机决定</td>
+<td>true或false</td>
+</tr>
+<tr>
+<td>char</td>
+<td>16bits</td>
+<td>0~65535</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>8bits</td>
+<td>-128~127</td>
+</tr>
+<tr>
+<td>short</td>
+<td>16 bits</td>
+<td>-32768~32767</td>
+</tr>
+<tr>
+<td>int</td>
+<td>32 bits</td>
+<td>-2147483648~2147483647</td>
+</tr>
+<tr>
+<td>long</td>
+<td>64 bits</td>
+<td>-很大~+很大</td>
+</tr>
+<tr>
+<td>float</td>
+<td>32 bits</td>
+<td>范围规模可变</td>
+</tr>
+<tr>
+<td>double</td>
+<td>64 bits</td>
+<td>范围规模可变</td>
+</tr>
+</tbody>
+</table>
 <p>简记：Be Careful! Bears Shouldn’t Ingest Large Furry Dogs</p>
 <p>编译器不允许将大杯的内容放到小杯中，但反过来可以。</p>
 <h4 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h4><p>你可以根据以下规则来帮助类、方法或变量命名</p>
@@ -226,15 +277,10 @@ nums[3] = 42
 nums[4] = 10
 nums[5] = 20
 nums[6] = 1</code><br>数组也是对象</p>
-<h4 id="创建对象数组"><a href="#创建对象数组" class="headerlink" title="创建对象数组"></a>创建对象数组</h4><ol>
-<li><p>声明一个Dog数组变量<br><code>Dog[] pets;</code></p>
-</li>
-<li><p>创建大小为7的Dog数组<br><code>pets = new Dog[7]</code></p>
-</li>
-<li><p>创建新的Dog对象并将它们赋值给数组的元素<br><code>pets[0] = new Dog()
+<h4 id="创建对象数组"><a href="#创建对象数组" class="headerlink" title="创建对象数组"></a>创建对象数组</h4><p>1.声明一个Dog数组变量<br><code>Dog[] pets;</code></p>
+<p>2.创建大小为7的Dog数组<br><code>pets = new Dog[7]</code></p>
+<p>3.创建新的Dog对象并将它们赋值给数组的元素<br><code>pets[0] = new Dog()
 pets[1] = new Dog()</code><br>一旦数组被声明出来，你就只能装入所声明类型的元素。</p>
-</li>
-</ol>
 <h4 id="要点小结"><a href="#要点小结" class="headerlink" title="要点小结"></a>要点小结</h4><ul>
 <li>变量有两种：primitive主数据类型和引用</li>
 <li>变量的声明必须有类型和名称</li>
@@ -513,11 +559,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">读书</a>
+                <a href="javascript:void(0)" class="js-tag color3">成长</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">成长</a>
+                <a href="javascript:void(0)" class="js-tag color3">读书</a>
               </li>
             
             <div class="clearfix"></div>
