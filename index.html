@@ -67,6 +67,8 @@
 	        
 				<li><a href="/tags/旅行/">旅行游记</a></li>
 	        
+				<li><a href="/tags/算法">算法游行</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
@@ -131,6 +133,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -151,15 +155,17 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 20%"><a href="/">首页</a></li>
+					<li style="width: 16.666666666666668%"><a href="/">首页</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/成长/">成长之路</a></li>
+					<li style="width: 16.666666666666668%"><a href="/tags/成长/">成长之路</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/大数据/">大数据</a></li>
+					<li style="width: 16.666666666666668%"><a href="/tags/大数据/">大数据</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/读书/">读书笔记</a></li>
+					<li style="width: 16.666666666666668%"><a href="/tags/读书/">读书笔记</a></li>
 		        
-					<li style="width: 20%"><a href="/tags/旅行/">旅行游记</a></li>
+					<li style="width: 16.666666666666668%"><a href="/tags/旅行/">旅行游记</a></li>
+		        
+					<li style="width: 16.666666666666668%"><a href="/tags/算法">算法游行</a></li>
 		        
 				</ul>
 			</nav>
@@ -175,6 +181,114 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-算法简介-简版桶排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/10/算法简介-简版桶排序/">算法简介_简版桶排序</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/10/算法简介-简版桶排序/" class="archive-article-date">
+  	<time datetime="2017-10-10T10:37:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>对于简版的桶排序，我们只需要借助一个一维数组就可以解决这个问题。<br>需求：期末考试完了老师要将同学们的分数按照从高到低排序。班上有5个同学，这5个同学分别考了5分、3分、5分、2分和8分（满分10分）。有没有好的方法编写一段程序，让计算机读入5个数然后将这5个数从大到小输出。</p>
+<p>首先我们需要申请一个大小合适的数组(假设大小为11)。现在你已经有了11个变量，编号从0到10。我们将其初始化为0，表示这些分数还没有人得过。</p>
+<p><code>student = [0 for i in range(0,11)]</code></p>
+<p><img src="/article_img/算法简介_简版桶排序_1.png" alt="算法_1_1"><br>下面处理每一个人的分数。<br>第一个人的分数是5分，我们就将相应的a[5]的值在原来基础上增加1，即将a[5]的值从0改为1，表示5分出现过一次。<br><img src="/article_img/算法简介_简版桶排序_2.png" alt="算法_1_2"><br>第二个人的分数是3分，我们就把相对应的a[3]的值在原来的基础上增加1，即将a[3]的值从0改为1，表示3分出现过了一次。<br><img src="/article_img/算法简介_简版桶排序_3.png" alt="算法_1_3"><br>第三个人的分数也是5分，所以a[5]的值需要在此基础上再增加1，即将a[5]的值从1改为2，表示5分出现过了两次。<br><img src="/article_img/算法简介_简版桶排序_4.png" alt="算法_1_4"><br>按照刚才的方法处理第四个和第五个人的分数，最终结果如下图：<br><img src="/article_img/算法简介_简版桶排序_5.png" alt="算法_1_5"><br>a[0]~a[10]总的数值其实就是0分到10分每个分数出现的次数。<br>接下来，我们只需要将出现过的分数打印出来就可以了，出现几次就打印几次。<br>a[0]为0，表示“0”没有出现过，不打印。<br>a[1]为0，表示“1”没有出现过，不打印。<br>a[2]为1，表示“2”出现过1次，打印2。<br>a[3]为1，表示“3”出现过1次，打印3。<br>a[4]为0，表示“4”没有出现过，不打印。<br>a[5]为2，表示“5”出现过2次，打印5 5。<br>a[6]为0，表示“6”没有出现过，不打印。<br>a[7]为0，表示“7”没有出现过，不打印。<br>a[8]为1，表示“8”没有出现过，不打印。<br>a[9]为0，表示“9”没有出现过，不打印。<br>a[10]为0，表示“10”没有出现过，不打印。<br>最终屏幕输出“2 3 5 5 8”。完整代码如下<br><code>&#39;&#39;&#39;初始化一个初始值为零长度为11的列表作为11个桶&#39;&#39;&#39;
+student = [0 for each_stu in range(0, 11)]
+&#39;&#39;&#39;输入5个学生的成绩,并放入对应的桶中&#39;&#39;&#39;
+stuNum = 5
+for each_score in raw_input().split()[0:stuNum]:
+    student[int(each_score)] += 1
+&#39;&#39;&#39;输出相应的不为空的桶对应的数（从小到大）&#39;&#39;&#39;
+for each_stu in range(0, 11):
+    value = student[each_stu]
+    index = each_stu
+    while value &gt; 0:
+        print(index, end=&#39; &#39;)
+        value -= 1
+print()
+&#39;&#39;&#39;输出相应的不为空的桶对应的数（从大到小）&#39;&#39;&#39;
+for each_stu in range(10, -1, -1):
+    value = student[each_stu]
+    index = each_stu
+    while value &gt; 0:
+        print(index, end=&#39; &#39;)
+        value -= 1</code><br>简单桶排序的优点：速度<strong>非常快</strong><br>简单桶排序的缺点：非常<strong>浪费空间</strong>、无法处理正整数以外的类型</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/算法游行/" class="article-tag-list-link color5">算法游行</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/10/算法简介-简版桶排序/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-读书笔记-Head-First-Java-第三天" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -439,19 +553,19 @@
 
 
   
-    <article id="post-读书笔记记-大象-Thinking-in-UML-第一天" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-读书笔记-大象-Thinking-in-UML-第一天" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/23/读书笔记记-大象-Thinking-in-UML-第一天/">读书笔记记_大象-Thinking-in-UML_第一天</a>
+      <a class="article-title" href="/2017/09/23/读书笔记-大象-Thinking-in-UML-第一天/">读书笔记记_大象-Thinking-in-UML_第一天</a>
     </h1>
   
 
         
-        <a href="/2017/09/23/读书笔记记-大象-Thinking-in-UML-第一天/" class="archive-article-date">
+        <a href="/2017/09/23/读书笔记-大象-Thinking-in-UML-第一天/" class="archive-article-date">
   	<time datetime="2017-09-23T13:51:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-23</time>
 </a>
         
@@ -461,7 +575,7 @@
       
         <h4 id="面向过程还是面向对象"><a href="#面向过程还是面向对象" class="headerlink" title="面向过程还是面向对象"></a>面向过程还是面向对象</h4><p>在很多人看来，面向过程和面向对象都是一种软件技术。事实上，都只是人们在采用不同的方法来认识和描述这个世界时所采用的工具，他们都只是表征而不是本证。<br>UML的创始人之一Grad Booch说“我对面向对象编程的目标从来就不是复用。相反，对我来说。对象提供了一种处理复杂问题的方式。这个问题可以追溯到亚里士多德：您把这个世界观视为过程还是对象？在面向对象兴起运动之前，编程以过程为中心，例如结构化设计方法，然而，系统已经到达了超越其处理能力的复杂性极点。有了对象，我们能够通过提升抽象级别来构建更大的、更复杂的系统——我认为，这才是面向对象编程运动的真正胜利。”<br>从本质上说面向过程和面向对象是一个古已有之的认识论的问题。之所以面向对象方法会兴起，是因为这种认识论能够帮助我们构造更为复杂的系统来解释越来越复杂的现实世界。<br>比掌握具体的技术更重要的是<strong>掌握认识论所采用的方法和分析过程</strong>，只有掌握了方法才能自如地使用工具。<br>
         
-          <a class="article-more-a" href="/2017/09/23/读书笔记记-大象-Thinking-in-UML-第一天/#more">more >></a>
+          <a class="article-more-a" href="/2017/09/23/读书笔记-大象-Thinking-in-UML-第一天/#more">more >></a>
         
       
 
@@ -496,7 +610,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/23/读书笔记记-大象-Thinking-in-UML-第一天/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/09/23/读书笔记-大象-Thinking-in-UML-第一天/">展开全文 >></a>
         </p>
       
 
@@ -970,11 +1084,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">成长</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">读书</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">成长</a>
               </li>
             
             <div class="clearfix"></div>
