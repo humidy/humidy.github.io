@@ -182,6 +182,94 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-利用Nginx加速HUE" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/12/利用Nginx加速HUE/">利用Nginx加速HUE</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/12/利用Nginx加速HUE/" class="archive-article-date">
+  	<time datetime="2018-01-12T00:28:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="为速度而作"><a href="#为速度而作" class="headerlink" title="为速度而作"></a>为速度而作</h4><blockquote>
+<p>&emsp;&emsp;自HUE的3.8版本后，开发团队在HUE中添加了支持静态文件的功能，将静态文件独立出来（静态文件，如：图片、JS等），使得可以利用NGINX作为额外的服务器缓存静态文件。采用这种方式会大量减少HUE应用需要加载的文件数目，使得用户获得更快的体验。<br>&emsp;&emsp;例如，在HUE的老版本中（3.8以前），加载一个beeswax（Hive Editor）应用，需要向服务端发送73个请求，下载约2.5MB的数据，测试耗时3秒。<br><img src="/article_img/大数据_20180112_1.png" alt="大数据_1_1"><br>
+        
+          <a class="article-more-a" href="/2018/01/12/利用Nginx加速HUE/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">HUE</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/大数据/" class="article-tag-list-link color4">大数据</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/12/利用Nginx加速HUE/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-算法简介-简版桶排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -922,7 +1010,7 @@ for each_stu in range(10, -1, -1):
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="自序"><a href="#自序" class="headerlink" title="自序"></a>自序</h4><blockquote>
+        <h4 id="为速度而作"><a href="#为速度而作" class="headerlink" title="为速度而作"></a>为速度而作</h4><blockquote>
 <p>&emsp;&emsp;从2010年参加工作至今已有7个年头，按照李笑来的说法，七年是一辈子，需要新生。在这一辈子(7年)的末尾，我也已越过三十而立的年龄，也被传染似的体会着中年危机带来的冲击。<br>&emsp;&emsp;作为一名没有经历程序猿进化的架构师，已经在这个岗位工作了5年有余，但有时心理或多或少还是底气不足，虽然天天领着一帮程序猿攻城拔寨，但要彻底融会贯通还缺一个切身的体会和真实的感悟，于是，作为老男孩的我，希望在新生中（接下来的7年），补上这一课，成为一名合格的程序猿，哈哈，这听上去有点可笑，不，这就是我的人生。<br>&emsp;&emsp;入行（程序猿）最好的方式是践行这个行业牛人的做法，写博客是必不可少的一个工具（貌似很多年前就有人让我写，我无知不屑无情的拒绝）。记录作为一个老男孩的程序猿回炉熔炼之路。</p>
 </blockquote>
         
@@ -1001,7 +1089,7 @@ for each_stu in range(10, -1, -1):
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 胡旻
+    		&copy; 2018 胡旻
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -1084,6 +1172,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">成长</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
@@ -1092,7 +1184,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">成长</a>
+                <a href="javascript:void(0)" class="js-tag color4">HUE</a>
               </li>
             
             <div class="clearfix"></div>
