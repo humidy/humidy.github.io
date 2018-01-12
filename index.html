@@ -48,10 +48,10 @@
       <img src="/humin.jpg" class="js-avatar show" style="width: 100%;height: 100%;opacity: 1;">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">胡旻</a></h1>
+		  <h1 class="header-author"><a href="/">胡小糊涂</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">一辈子的职业★学生</p>
+		<p class="header-subtitle">默默的行走在前行的路上</p>
 		
 
 		<nav class="header-menu">
@@ -61,7 +61,7 @@
 	        
 				<li><a href="/tags/成长/">成长之路</a></li>
 	        
-				<li><a href="/tags/大数据/">大数据</a></li>
+				<li><a href="/tags/大数据/">大数据实践</a></li>
 	        
 				<li><a href="/tags/读书/">读书笔记</a></li>
 	        
@@ -116,10 +116,10 @@
 				<img src="/humin.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">胡旻</h1>
+			  <h1 class="header-author js-header-author">胡小糊涂</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>一辈子的职业★学生<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>默默的行走在前行的路上<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -159,7 +159,7 @@
 		        
 					<li style="width: 16.666666666666668%"><a href="/tags/成长/">成长之路</a></li>
 		        
-					<li style="width: 16.666666666666668%"><a href="/tags/大数据/">大数据</a></li>
+					<li style="width: 16.666666666666668%"><a href="/tags/大数据/">大数据实践</a></li>
 		        
 					<li style="width: 16.666666666666668%"><a href="/tags/读书/">读书笔记</a></li>
 		        
@@ -290,31 +290,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>对于简版的桶排序，我们只需要借助一个一维数组就可以解决这个问题。<br>需求：期末考试完了老师要将同学们的分数按照从高到低排序。班上有5个同学，这5个同学分别考了5分、3分、5分、2分和8分（满分10分）。有没有好的方法编写一段程序，让计算机读入5个数然后将这5个数从大到小输出。</p>
-<p>首先我们需要申请一个大小合适的数组(假设大小为11)。现在你已经有了11个变量，编号从0到10。我们将其初始化为0，表示这些分数还没有人得过。</p>
-<p><code>student = [0 for i in range(0,11)]</code></p>
-<p><img src="/article_img/算法简介_简版桶排序_1.png" alt="算法_1_1"><br>下面处理每一个人的分数。<br>第一个人的分数是5分，我们就将相应的a[5]的值在原来基础上增加1，即将a[5]的值从0改为1，表示5分出现过一次。<br><img src="/article_img/算法简介_简版桶排序_2.png" alt="算法_1_2"><br>第二个人的分数是3分，我们就把相对应的a[3]的值在原来的基础上增加1，即将a[3]的值从0改为1，表示3分出现过了一次。<br><img src="/article_img/算法简介_简版桶排序_3.png" alt="算法_1_3"><br>第三个人的分数也是5分，所以a[5]的值需要在此基础上再增加1，即将a[5]的值从1改为2，表示5分出现过了两次。<br><img src="/article_img/算法简介_简版桶排序_4.png" alt="算法_1_4"><br>按照刚才的方法处理第四个和第五个人的分数，最终结果如下图：<br><img src="/article_img/算法简介_简版桶排序_5.png" alt="算法_1_5"><br>a[0]~a[10]总的数值其实就是0分到10分每个分数出现的次数。<br>接下来，我们只需要将出现过的分数打印出来就可以了，出现几次就打印几次。<br>a[0]为0，表示“0”没有出现过，不打印。<br>a[1]为0，表示“1”没有出现过，不打印。<br>a[2]为1，表示“2”出现过1次，打印2。<br>a[3]为1，表示“3”出现过1次，打印3。<br>a[4]为0，表示“4”没有出现过，不打印。<br>a[5]为2，表示“5”出现过2次，打印5 5。<br>a[6]为0，表示“6”没有出现过，不打印。<br>a[7]为0，表示“7”没有出现过，不打印。<br>a[8]为1，表示“8”没有出现过，不打印。<br>a[9]为0，表示“9”没有出现过，不打印。<br>a[10]为0，表示“10”没有出现过，不打印。<br>最终屏幕输出“2 3 5 5 8”。完整代码如下<br><code>&#39;&#39;&#39;初始化一个初始值为零长度为11的列表作为11个桶&#39;&#39;&#39;
-student = [0 for each_stu in range(0, 11)]
-&#39;&#39;&#39;输入5个学生的成绩,并放入对应的桶中&#39;&#39;&#39;
-stuNum = 5
-for each_score in raw_input().split()[0:stuNum]:
-    student[int(each_score)] += 1
-&#39;&#39;&#39;输出相应的不为空的桶对应的数（从小到大）&#39;&#39;&#39;
-for each_stu in range(0, 11):
-    value = student[each_stu]
-    index = each_stu
-    while value &gt; 0:
-        print(index, end=&#39; &#39;)
-        value -= 1
-print()
-&#39;&#39;&#39;输出相应的不为空的桶对应的数（从大到小）&#39;&#39;&#39;
-for each_stu in range(10, -1, -1):
-    value = student[each_stu]
-    index = each_stu
-    while value &gt; 0:
-        print(index, end=&#39; &#39;)
-        value -= 1</code><br>简单桶排序的优点：速度<strong>非常快</strong><br>简单桶排序的缺点：非常<strong>浪费空间</strong>、无法处理正整数以外的类型</p>
-
+        <p>对于简版的桶排序，我们只需要借助一个一维数组就可以解决这个问题。<br>需求：期末考试完了老师要将同学们的分数按照从高到低排序。班上有5个同学，这5个同学分别考了5分、3分、5分、2分和8分（满分10分）。有没有好的方法编写一段程序，让计算机读入5个数然后将这5个数从大到小输出。<br>
+        
+          <a class="article-more-a" href="/2017/10/10/算法简介-简版桶排序/#more">more >></a>
+        
       
 
       
@@ -1089,7 +1068,7 @@ for each_stu in range(10, -1, -1):
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 胡旻
+    		&copy; 2018 胡小糊涂
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -1172,7 +1151,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">成长</a>
+                <a href="javascript:void(0)" class="js-tag color4">大数据</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1180,11 +1159,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">大数据</a>
+                <a href="javascript:void(0)" class="js-tag color3">读书</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">读书</a>
+                <a href="javascript:void(0)" class="js-tag color3">成长</a>
               </li>
             
             <div class="clearfix"></div>
